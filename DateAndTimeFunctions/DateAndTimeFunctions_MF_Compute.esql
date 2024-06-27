@@ -1,0 +1,18 @@
+
+CREATE COMPUTE MODULE DateAndTimeFunctions_MF_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE ref REFERENCE TO OutputRoot.JSON.Data.TimeFunctions;
+		SET ref.Current_date = CURRENT_DATE;
+		SET OutputRoot.JSON.Data.TimeFunctions.Current_time = CURRENT_TIME;
+		SET OutputRoot.JSON.Data.TimeFunctions.Current_timeStamp = CURRENT_TIMESTAMP;
+		SET OutputRoot.JSON.Data.TimeFunctions.Current_GMTTime = CURRENT_GMTTIME;
+		SET OutputRoot.JSON.Data.TimeFunctions.Current_GMTDate = CURRENT_GMTDATE;
+		SET OutputRoot.JSON.Data.TimeFunctions.Current_GMTTimeStamp = CURRENT_GMTTIMESTAMP;
+		SET OutputRoot.JSON.Data.TimeFunctions.Local_TimeZone = LOCAL_TIMEZONE;
+	END;
+END MODULE;

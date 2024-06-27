@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <input path="db:database(/orcl.dbm,orcl,db:schema-tables(SYSTEM,EMP))" var="orcl2"/>
+    <output path="/XMLRetriveData.xsd"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="Retrive_Mapping_MF_Mapping">
+        <input path="$orcl2/db:select(fn:false(),ResultSet(SYSTEM/EMP/ID,SYSTEM/EMP/NAME),db:where('1=1'))" var="dbselect"/>
+        <output path="mb:msg(Data,assembly,XMLNSC,Properties)" var="MessageAssembly2"/>
+        <select ref="dbselect">
+            <input path="$dbselect/ResultSet"/>
+            <output path="$MessageAssembly2/Data/Name"/>
+            <expression>
+                <input path="SYSTEM/EMP/NAME"/>
+                <output path="."/>
+            </expression>
+        </select>
+        <move>
+            <input path="$dbselect/ResultSet/SYSTEM/EMP/ID"/>
+            <output path="$MessageAssembly2/Data/ID"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

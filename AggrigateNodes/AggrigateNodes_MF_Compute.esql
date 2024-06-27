@@ -1,0 +1,14 @@
+
+
+CREATE COMPUTE MODULE AggrigateNodes_MF_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		
+		SET OutputRoot.JSON.Data.response.AadharValidation = InputRoot.ComIbmAggregateReplyBody.AGGR[1].JSON.Data.AadharValidation;
+		SET OutputRoot.JSON.Data.response.PanValidation = InputRoot.ComIbmAggregateReplyBody.AGGR[2].JSON.Data.PanValidation;
+	END;
+END MODULE;

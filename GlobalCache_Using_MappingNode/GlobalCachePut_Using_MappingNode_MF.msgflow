@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="GlobalCachePut_Using_MappingNode_MF.msgflow" nsPrefix="GlobalCachePut_Using_MappingNode_MF.msgflow">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1" nodeLayoutStyle="RECTANGLE">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <translation xmi:type="utility:TranslatableString" key="GlobalCachePut_Using_MappingNode_MF" bundleName="GlobalCachePut_Using_MappingNode_MF" pluginId="GlobalCache_Using_MappingNode"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/GlobalCache_Using_MappingNode/icons/full/obj16/GlobalCachePut_Using_MappingNode_MF.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/GlobalCache_Using_MappingNode/icons/full/obj30/GlobalCachePut_Using_MappingNode_MF.gif"/>
+    <composition/>
+    <propertyOrganizer/>
+    <stickyBoard/>
+  </eClassifiers>
+</ecore:EPackage>

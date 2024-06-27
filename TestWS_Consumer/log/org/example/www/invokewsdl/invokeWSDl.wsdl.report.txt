@@ -1,0 +1,21 @@
+
+
+Importing file: C:\Users\Sreenivas Bandaru\IBM\ACET12\workspace\TestWS_Consumer\invokeWSDl.wsdl
+
+The WSDL import will proceed with bindings invokeWSDlSOAP.
+Creating wsdl schema document for file:///C:/Users/Sreenivas Bandaru/IBM/ACET12/workspace/TestWS_Consumer/invokeWSDl.wsdl.
+Parsing wsdl binding {http://www.example.org/invokeWSDl/}invokeWSDlSOAP.
+Parsing wsdl binding input InvokeApp.
+Parsing wsdl binding output InvokeApp.
+Processing doc style for operation InvokeApp.
+Populating WSDL schema invokeWSDl.xsd.
+Creating file invokeWSDl.xsd in the workspace.
+Copying source WSDL invokeWSDl.wsdl to invokeWSDl.wsdl.
+
+Elapsed time processing this message definition file: 0.261 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

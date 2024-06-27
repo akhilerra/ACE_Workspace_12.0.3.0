@@ -1,0 +1,21 @@
+
+
+Importing file: C:\Users\Sreenivas Bandaru\IBM\ACET12\workspace\TestWS_Provider\demoWSDL.wsdl
+
+The WSDL import will proceed with bindings demoWSDLSOAP.
+Creating wsdl schema document for file:///C:/Users/Sreenivas Bandaru/IBM/ACET12/workspace/TestWS_Provider/demoWSDL.wsdl.
+Parsing wsdl binding {http://www.example.org/demoWSDL/}demoWSDLSOAP.
+Parsing wsdl binding input AcctOpening.
+Parsing wsdl binding output AcctOpening.
+Processing doc style for operation AcctOpening.
+Populating WSDL schema demoWSDL.xsd.
+Creating file demoWSDL.xsd in the workspace.
+Copying source WSDL demoWSDL.wsdl to demoWSDL.wsdl.
+
+Elapsed time processing this message definition file: 0.293 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

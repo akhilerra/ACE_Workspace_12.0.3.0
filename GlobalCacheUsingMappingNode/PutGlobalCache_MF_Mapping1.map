@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <input path="/XmlData.xsd" var="var6"/>
+    <input path="jar:file://!com/ibm/msl/mapping/cache/xsds/cache.xsd" var="var5"/>
+    <output path="/XmlData.xsd" var="var3"/>
+    <output path="jar:file://!com/ibm/msl/mapping/cache/xsds/cache.xsd" var="var4"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="PutGlobalCache_MF_Mapping1">
+        <input path="$var6/mb:msg(Data,assembly,XMLNSC,Properties)" var="MessageAssembly"/>
+        <output path="$var3/mb:msg(Data,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_Data"/>
+        <transaction>
+            <cacheGet>
+                <input path="$MessageAssembly/Data/ID"/>
+                <output path="$var4/CacheGet"/>
+                <move>
+                    <input path="."/>
+                    <output path="Key"/>
+                </move>
+            </cacheGet>
+            <cacheReturn>
+                <input path="$var5/CacheGetReturn"/>
+                <output path="$ComIbmMessageAssembly_Data/Data/Name"/>
+                <move>
+                    <input path="Value"/>
+                    <output path="."/>
+                </move>
+            </cacheReturn>
+        </transaction>
+        <move>
+            <input path="$MessageAssembly/Properties"/>
+            <output path="$ComIbmMessageAssembly_Data/Properties"/>
+        </move>
+        <move>
+            <input path="$MessageAssembly/Data/ID"/>
+            <output path="$ComIbmMessageAssembly_Data/Data/ID"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="invokeWSDl" targetNamespace="http://www.example.org/invokeWSDl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.example.org/invokeWSDl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="invokeWSDlSOAP" originalBindingStyle="document"/>
+        <generatedXSD location="invokeWSDl_InlineSchema1.xsd"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  
+  
+  
+  
+  
+  
+  <wsdl:types>
+    
+          <xsd:schema targetNamespace="http://www.example.org/invokeWSDl/" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+<xsd:include schemaLocation="invokeWSDl_InlineSchema1.xsd"/>
+</xsd:schema>
+    </wsdl:types>
+  <wsdl:message name="InvokeAppRequest">
+    <wsdl:part element="tns:InvokeApp" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="InvokeAppResponse">
+    <wsdl:part element="tns:InvokeAppResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="invokeWSDl">
+    <wsdl:operation name="InvokeApp">
+      <wsdl:input message="tns:InvokeAppRequest"/>
+      <wsdl:output message="tns:InvokeAppResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="invokeWSDlSOAP" type="tns:invokeWSDl">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="InvokeApp">
+      <soap:operation soapAction="http://www.example.org/invokeWSDl/InvokeApp"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="invokeWSDl">
+    <wsdl:port binding="tns:invokeWSDlSOAP" name="invokeWSDlSOAP">
+      <soap:address location="http://localhost:7801/consumer"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

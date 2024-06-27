@@ -1,0 +1,15 @@
+DECLARE TokenHeaders EXTERNAL CHARACTER;
+
+CREATE COMPUTE MODULE SetUrlEncoded
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+		SET OutputRoot.Properties.ContentType = 'application/x-www-form-urlencoded';
+		SET OutputRoot.BLOB.BLOB = CAST(TokenHeaders AS BLOB CCSID InputRoot.Properties.CodedCharSetId);
+		
+	END;
+END MODULE;

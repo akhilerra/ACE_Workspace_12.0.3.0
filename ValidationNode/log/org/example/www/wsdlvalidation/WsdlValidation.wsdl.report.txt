@@ -1,0 +1,22 @@
+
+
+Importing file: C:\Users\Sreenivas Bandaru\IBM\ACET12\workspace\ValidationNode\WsdlValidation.wsdl
+
+The WSDL import will proceed with bindings WsdlValidationSOAP.
+Creating wsdl schema document for file:///C:/Users/Sreenivas Bandaru/IBM/ACET12/workspace/ValidationNode/WsdlValidation.wsdl.
+Parsing wsdl binding {http://www.example.org/WsdlValidation/}WsdlValidationSOAP.
+Parsing wsdl binding input Emp.
+Parsing wsdl binding output Emp.
+Processing doc style for operation Emp.
+Populating WSDL schema WsdlValidation.xsd.
+Creating file WsdlValidation.xsd in the workspace.
+Creating file WsdlValidation_InlineSchema1.xsd in the workspace.
+Copying source WSDL WsdlValidation.wsdl to WsdlValidation.wsdl.
+
+Elapsed time processing this message definition file: 0.463 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

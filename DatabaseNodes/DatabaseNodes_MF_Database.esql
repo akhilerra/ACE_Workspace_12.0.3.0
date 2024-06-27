@@ -1,0 +1,15 @@
+
+
+CREATE DATABASE MODULE DatabaseNodes_MF_Database
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		
+		
+		
+		
+		
+		RETURN TRUE;
+	END;
+
+END MODULE;

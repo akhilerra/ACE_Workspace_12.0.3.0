@@ -1,0 +1,61 @@
+
+
+CREATE COMPUTE MODULE StringManipulationFunctions_MF_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		CREATE LASTCHILD OF OutputRoot DOMAIN('JSON');
+		CREATE LASTCHILD OF OutputRoot.JSON NAME('Data');
+		CREATE FIRSTCHILD OF OutputRoot.JSON.Data Name('Functions');
+		DECLARE ref REFERENCE TO OutputRoot.JSON.Data.Functions;
+		
+		DECLARE PositionFunctionRes INTEGER;
+		DECLARE word, LeftFunctionRes, LengthFunctionRes, LowerFunctionRes, LTrimFunctionRes, OverlayFunctionRes, ReplaceFuctionRes CHARACTER;
+		DECLARE ContainsRes, EndsWithRes BOOLEAN;
+		
+		SET word = InputRoot.JSON.Data.Word;
+		--# CONTAINS FUNCTION
+		SET ContainsRes = CONTAINS(word , 'ello');
+		SET ref.ContainsFunction = ContainsRes;
+		
+		
+		--# ENDSWITH FUNCTION
+		SET EndsWithRes = ENDSWITH(word , '..!');
+		SET ref.EndsWithFunction = EndsWithRes;
+		
+		--# LEFT FUNCTION
+		SET LeftFunctionRes = LEFT(word , 5);
+		SET ref.LeftFunction = LeftFunctionRes;
+		
+		--# LENGTH FUNCTION 
+		SET LengthFunctionRes = LENGTH(word);
+		SET ref.LengthFunction = LengthFunctionRes;
+		
+		--# LOWER FUNCTION
+		SET LowerFunctionRes = LOWER(word);
+		SET ref.LowerFunction = LowerFunctionRes;
+		
+		--# LTRIM FUNCTION
+		SET LTrimFunctionRes = LTRIM(word);
+		SET ref.LTrimFunction = LTrimFunctionRes;
+		
+		--# POSITION FUNCTION 
+		SET PositionFunctionRes = POSITION('World' IN word );
+		SET ref.PositionFunction = PositionFunctionRes;
+
+		--# OVERLAY FUNCTION
+		SET OverlayFunctionRes = OVERLAY(word PLACING 'My' from PositionFunctionRes for 0);
+		SET ref.OverlayFunction = OverlayFunctionRes;
+		
+		--# REPLACE FUNCTION
+		SET ReplaceFuctionRes = REPLACE(word, SUBSTRING(word from 0 for 6), 'Hi');
+		SET ref.ReplaceFunction = ReplaceFuctionRes;
+		
+		--# REPLICATE FUNCTION
+		--SET 
+		
+	END;
+END MODULE;

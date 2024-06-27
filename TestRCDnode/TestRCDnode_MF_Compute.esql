@@ -1,0 +1,17 @@
+
+
+CREATE COMPUTE MODULE TestRCDnode_MF_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+
+		SET OutputRoot.XMLNSC = InputRoot;
+		SET OutputRoot.XMLNSC.Emp.Salary  = 50000;
+		
+	END;
+END MODULE;

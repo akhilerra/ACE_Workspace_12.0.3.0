@@ -1,0 +1,39 @@
+CREATE COMPUTE MODULE ExtractJWTToken_MF_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+
+		DECLARE token CHARACTER SUBSTRING(InputRoot.JSON.Data.jwttoken FROM 8);
+
+		DECLARE dot1 INTEGER POSITION('.' IN token);
+		SET token = REPLACE(token, SUBSTRING(token from 0 for dot1+1), '');
+
+		DECLARE dot2 INTEGER POSITION('.' IN token);
+		SET token = REPLACE(token, SUBSTRING(token from dot2), '');	
+		DECLARE bol BOOLEAN;
+		DECLARE decodedToken CHARACTER;
+--		SET decodedToken = CAST(DecodeBase62Data(token) AS CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
+		CREATE LASTCHILD OF OutputRoot DOMAIN('JSON') PARSE(DecodeBase62Data(token));
+		DELETE FIRSTCHILD OF OutputRoot.JSON.Data;
+		DELETE LASTCHILD OF OutputRoot.JSON.Data;
+		DELETE LASTCHILD OF OutputRoot.JSON.Data;
+		DELETE LASTCHILD OF OutputRoot.JSON.Data;
+		
+		DECLARE lenOftoken INTEGER LENGTH(OutputRoot.JSON.Data.sub);
+		
+		DECLARE key CHARACTER SUBSTRING(OutputRoot.JSON.Data.sub FROM 5);
+		SET key = SUBSTRING(key FROM lenOftoken-1);
+		SET OutputRoot.JSON.Data.EncryptedData = EncryptData('akhil', key);
+
+	END;
+END MODULE;
+CREATE PROCEDURE DecodeBase62Data(IN token CHARACTER ) RETURNS BLOB
+LANGUAGE JAVA
+EXTERNAL NAME "ListCardDetails.Base64Decode.decoder";
+
+CREATE PROCEDURE EncryptData(IN data CHARACTER, IN key CHARACTER ) RETURNS CHARACTER
+LANGUAGE JAVA
+EXTERNAL NAME "ListCardDetails.MessageDecrypt.encrypt";

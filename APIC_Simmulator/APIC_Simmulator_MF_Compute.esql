@@ -1,0 +1,15 @@
+
+
+CREATE COMPUTE MODULE APIC_Simmulator_MF_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot.XMLNSC.sql.result = InputRoot.XMLNSC.sql.result;
+		SET OutputRoot.XMLNSC.sql.row.column = InputRoot.XMLNSC.sql.row.column;
+		SET OutputRoot.XMLNSC.sql.row.value = InputRoot.XMLNSC.sql.row.value;
+	END;
+END MODULE;

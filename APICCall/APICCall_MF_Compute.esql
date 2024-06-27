@@ -1,0 +1,16 @@
+
+
+CREATE COMPUTE MODULE APICCall_MF_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+	
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		
+		SET OutputRoot = InputRoot;
+		SET OutputRoot.HTTPInputHeader."X-IBM-Client-Id" = 'aa336aab8a2bcd9b3e89bbd6840dc0e0';
+		
+	END;
+END MODULE;

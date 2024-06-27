@@ -1,0 +1,12 @@
+
+
+CREATE COMPUTE MODULE Encryption_MF_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	call CopyEntireMessage();
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

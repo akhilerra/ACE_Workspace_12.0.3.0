@@ -1,0 +1,22 @@
+
+CREATE COMPUTE MODULE ListCardDetails_MF_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE inref REFERENCE TO InputRoot.JSON.Data.ListCardDetails;
+--		DECLARE ListCardDetails CHARACTER;
+--		SET ListCardDetails = MessageDecrption(InputRoot.JSON.Data.Token, jwkKey);
+		SET OutputRoot.JSON.Data.ESBHeader.Servicecode = inref.ESBHeader.serviceCode;
+		SET OutputRoot.JSON.Data.ESBHeader.Channel = inref.ESBHeader.channelName;
+		SET OutputRoot.JSON.Data.ESBHeader.Servicename = inref.ESBHeader.serviceName;
+		SET OutputRoot.JSON.Data.ESBHeader.Messageid = inref.ESBHeader.messageID;
+		DECLARE incustID INTEGER inref.customerID;
+		DECLARE record ROW;
+		SET record = PASSTHRU('SELECT * FROM ListCardDetails where customerID = ?' TO DataSource.dsn VALUES(incustID));
+		SET OutputRoot.JSON.Data.data.results = record;
+		RETURN TRUE;
+
+	END;
+END MODULE;
+--CREATE PROCEDURE MessageDecrption(IN encrptedMessage CHARACTER, IN jwkKey CHARACTER) RETURNS CHARACTER
+--LANGUAGE JAVA
+--EXTERNAL NAME "ListCardDetails.MessageDecrypt.decryptHS256";

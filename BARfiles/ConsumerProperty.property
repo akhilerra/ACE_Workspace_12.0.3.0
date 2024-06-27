@@ -1,0 +1,95 @@
+BIP1052I: Reading Bar file using runtime mqsireadbar...
+C:\Users\Sreenivas Bandaru\IBM\ACET12\workspace\BARfiles\ConsumerBar.bar:
+  ConsumerPolicy/WS_ConsumerBinding.wssecbindings.xml (4/24/24 11:27 AM):
+  ConsumerPolicy/WS_Consumer.wssecpolicy.xml (4/24/24 11:27 AM):
+  ConsumerPolicy/policy.descriptor (4/24/24 11:27 AM):
+  TestWS_Consumer.appzip (4/24/24 11:27 AM):
+    invokeWSDl.xsd (4/24/24 11:27 AM):
+    invokeWSDl.wsdl (4/24/24 11:27 AM):
+    invokeWSDl_InlineSchema1.xsd (4/24/24 11:27 AM):
+    IBMdefined\org\xmlsoap\schemas\soap\envelope\soapenv11.xsd (4/24/24 11:27 AM):
+    application.descriptor (4/24/24 11:27 AM):
+    IBMdefined\soap.xsd (4/24/24 11:27 AM):
+    IBMdefined\org\w3\www\xml\_1998\namespace\xml.xsd (4/24/24 11:27 AM):
+    TestWS_Consumer_MF_Compute.esql (4/24/24 11:27 AM):
+    TestWS_Consumer_MF_Compute1.esql (4/24/24 11:27 AM):
+    TestWS_Consumer_MF.msgflow (4/24/24 11:27 AM):
+    Deployment descriptor:
+      startMode
+      TestWS_Consumer_MF#additionalInstances
+      TestWS_Consumer_MF#notificationThresholdMsgsPerSec
+      TestWS_Consumer_MF#maximumRateMsgsPerSec
+      TestWS_Consumer_MF#processingTimeoutSec
+      TestWS_Consumer_MF#processingTimeoutAction
+      TestWS_Consumer_MF#wlmPolicy
+      TestWS_Consumer_MF#commitCount
+      TestWS_Consumer_MF#commitInterval
+      TestWS_Consumer_MF#coordinatedTransaction
+      TestWS_Consumer_MF#consumerPolicySet = WS_Consumer
+      TestWS_Consumer_MF#providerPolicySet
+      TestWS_Consumer_MF#consumerPolicySetBindings = WS_ConsumerBinding
+      TestWS_Consumer_MF#providerPolicySetBindings
+      TestWS_Consumer_MF#securityProfileName
+      TestWS_Consumer_MF#monitoringProfile
+      TestWS_Consumer_MF#startMode
+      TestWS_Consumer_MF#startInstancesWhenFlowStarts
+      TestWS_Consumer_MF#SOAP Input.urlSelector = /consumer
+      TestWS_Consumer_MF#SOAP Input.useHTTPS
+      TestWS_Consumer_MF#SOAP Input.maxClientWaitTime
+      TestWS_Consumer_MF#SOAP Input.allowQueryWSDL
+      TestWS_Consumer_MF#SOAP Input.initialContextFactory
+      TestWS_Consumer_MF#SOAP Input.locationJndiBindings
+      TestWS_Consumer_MF#SOAP Input.connectionFactoryName
+      TestWS_Consumer_MF#SOAP Input.backoutDestination
+      TestWS_Consumer_MF#SOAP Input.backoutThreshold
+      TestWS_Consumer_MF#SOAP Input.propertySelector
+      TestWS_Consumer_MF#SOAP Input.timeStampSelector
+      TestWS_Consumer_MF#SOAP Input.messageDeliveryModeSelector
+      TestWS_Consumer_MF#SOAP Input.messagePrioritySelector
+      TestWS_Consumer_MF#SOAP Input.messageIDSelector
+      TestWS_Consumer_MF#SOAP Input.messageRedeliveredSelector
+      TestWS_Consumer_MF#SOAP Input.messageCorrelationIDSelector
+      TestWS_Consumer_MF#SOAP Input.targetService
+      TestWS_Consumer_MF#SOAP Input.securityProfileName
+      TestWS_Consumer_MF#SOAP Input.policySet
+      TestWS_Consumer_MF#SOAP Input.policySetBindings
+      TestWS_Consumer_MF#SOAP Input.sendProcessingFaultsToFailure
+      TestWS_Consumer_MF#SOAP Input.validateMaster = none
+      TestWS_Consumer_MF#SOAP Input.validateFailureAction
+      TestWS_Consumer_MF#SOAP Input.componentLevel
+      TestWS_Consumer_MF#SOAP Input.additionalInstances
+      TestWS_Consumer_MF#SOAP Reply.allowMTOM
+      TestWS_Consumer_MF#SOAP Reply.validateMaster
+      TestWS_Consumer_MF#SOAP Reply.securityProfileName
+      TestWS_Consumer_MF#SOAP Request.webServiceURL = http://localhost:7800/provider
+      TestWS_Consumer_MF#SOAP Request.requestTimeout = 60
+      TestWS_Consumer_MF#SOAP Request.httpProxyLocation
+      TestWS_Consumer_MF#SOAP Request.sslProtocol = SSLv3
+      TestWS_Consumer_MF#SOAP Request.allowedSSLCiphers
+      TestWS_Consumer_MF#SOAP Request.requestCompressionType
+      TestWS_Consumer_MF#SOAP Request.acceptCompressedResponses
+      TestWS_Consumer_MF#SOAP Request.hostnameChecking
+      TestWS_Consumer_MF#SOAP Request.keyAlias
+      TestWS_Consumer_MF#SOAP Request.enableCRLCheck
+      TestWS_Consumer_MF#SOAP Request.jmsDestination
+      TestWS_Consumer_MF#SOAP Request.jmsReplyToDestination
+      TestWS_Consumer_MF#SOAP Request.requestTimeoutJMS
+      TestWS_Consumer_MF#SOAP Request.initialContextFactory
+      TestWS_Consumer_MF#SOAP Request.locationJndiBindings
+      TestWS_Consumer_MF#SOAP Request.connectionFactoryName
+      TestWS_Consumer_MF#SOAP Request.targetService
+      TestWS_Consumer_MF#SOAP Request.deliveryMode
+      TestWS_Consumer_MF#SOAP Request.messagePriority
+      TestWS_Consumer_MF#SOAP Request.messageExpiration
+      TestWS_Consumer_MF#SOAP Request.messageType
+      TestWS_Consumer_MF#SOAP Request.securityProfileName
+      TestWS_Consumer_MF#SOAP Request.policySet
+      TestWS_Consumer_MF#SOAP Request.policySetBindings
+      TestWS_Consumer_MF#SOAP Request.allowMTOM
+      TestWS_Consumer_MF#SOAP Request.validateMaster = none
+      TestWS_Consumer_MF#SOAP Request.validateFailureAction
+      TestWS_Consumer_MF#Compute1.dataSource
+      TestWS_Consumer_MF#Compute1.connectDatasourceBeforeFlowStarts
+      TestWS_Consumer_MF#Compute1.validateMaster
+
+BIP8071I: Successful command completion.

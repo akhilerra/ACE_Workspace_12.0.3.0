@@ -1,0 +1,15 @@
+
+
+CREATE COMPUTE MODULE JDBC_Connection_MF_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE name CHARACTER ;
+		DECLARE id INTEGER CAST(InputRoot.XMLNSC.id AS INTEGER);
+		CALL JdbcConnection(id) into name;
+		--SET name = JdbcConnection(InputRoot.XMLNSC.id);
+		SET OutputRoot.XMLNSC.name = name;
+	END;
+END MODULE;
+CREATE PROCEDURE JdbcConnection (IN id INTEGER) RETURNS CHARACTER
+LANGUAGE JAVA
+EXTERNAL NAME "test.JDBCConnection.call";

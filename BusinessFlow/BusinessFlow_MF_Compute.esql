@@ -1,0 +1,28 @@
+
+
+CREATE COMPUTE MODULE BusinessFlow_MF_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+
+	    CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE msg CHARACTER CAST(ASBITSTREAM(InputRoot.XMLNSC CCSID 1208 ENCODING 546) AS CHARACTER CCSID 1208);
+		
+		PASSTHRU 'Insert INTO LOGS VALUES(?,?,?,?)' TO DataSource.dsn VALUES( CURRENT_TIMESTAMP, ApplicationLabel, MessageFlowLabel, msg);
+		
+		SET OutputRoot.MQRFH2.usr.replyId = InputRoot.MQRFH2.usr.replyId;
+		
+		DECLARE empDetails ROW;
+		SET empDetails = PASSTHRU ('SELECT * FROM EMP WHERE ID = ?' TO DataSource.dsn VALUES( InputRoot.XMLNSC.EmpDetails.EmpId));
+
+		IF empDetails.ID is NULL THEN
+			SET OutputRoot.XMLNSC.EmpDetails.Status = 'There are no Employees with the following ID';
+		ELSE
+			SET OutputRoot.XMLNSC.EmpDetails = empDetails;
+		END IF;  
+				
+	END;
+END MODULE;

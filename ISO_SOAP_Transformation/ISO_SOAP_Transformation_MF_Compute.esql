@@ -1,0 +1,16 @@
+DECLARE ns4 NAMESPACE 'http://www.example.org/ws_sec/';
+DECLARE ns NAMESPACE 'http://IntegrationService';
+
+CREATE COMPUTE MODULE ISO_SOAP_Transformation_MF_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	       CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+
+		SET OutputRoot.SOAP.Body.ns:NewOperationResponse.out = InputRoot.DFDL.ISO8583_1987.AcquiringInstitutionIdentificationCode_032;
+		
+	END;
+END MODULE;

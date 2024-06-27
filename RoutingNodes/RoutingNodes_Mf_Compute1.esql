@@ -1,0 +1,8 @@
+
+
+CREATE COMPUTE MODULE RoutingNodes_Mf_Compute1
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot.JSON.Data.Status = 'This is a Post Service';
+	END;
+END MODULE;

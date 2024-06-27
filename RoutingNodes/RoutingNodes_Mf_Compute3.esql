@@ -1,0 +1,20 @@
+
+
+CREATE COMPUTE MODULE RoutingNodes_Mf_Compute3
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot = InputRoot;
+		IF InputRoot.JSON.Data.Operation.Method = 'GET' THEN
+			SET OutputLocalEnvironment.Destination.RouterList.DestinationData[1].labelName = 'GET';
+--			PROPAGATE TO LABEL 'GET';
+		ELSEIF InputRoot.JSON.Data.Operation.Method = 'POST' THEN
+			SET OutputLocalEnvironment.Destination.RouterList.DestinationData[1].labelName = 'POST';
+--			PROPAGATE TO LABEL 'POST';
+		ElseIF InputRoot.JSON.Data.Operation.Method = 'PUT' THEN
+			SET OutputLocalEnvironment.Destination.RouterList.DestinationData[1].labelName = 'PUT';
+--			PROPAGATE TO LABEL 'PUT';
+		ELSE
+			SET OutputLocalEnvironment.Destination.RouterList.DestinationData[1].labelName = 'ERROR'; 
+		END IF;
+	END;
+END MODULE;

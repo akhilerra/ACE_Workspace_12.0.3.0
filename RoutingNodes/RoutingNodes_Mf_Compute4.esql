@@ -1,0 +1,12 @@
+
+
+CREATE COMPUTE MODULE RoutingNodes_Mf_Compute4
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		THROW USER EXCEPTION CATALOG 'BIPmsgs' MESSAGE 2140 VALUES ('Error 405: Method is not allowed.');
+	END;
+END MODULE;

@@ -1,0 +1,42 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "RESTapi",
+    "version": "1.0.0",
+    "description": "RESTapi"
+  },
+  "servers": [
+    {
+      "url": "/restapi/v1"
+    }
+  ],
+  "paths": {
+    "/POST": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "success"
+          }
+        },
+        "parameters": [
+          {
+            "name": "Emp",
+            "in": "cookie",
+            "schema": {
+              "title": "EmpDetails",
+              "type": "object",
+              "properties": {
+                "EmpName": {
+                  "type": "string"
+                },
+                "EmpID": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

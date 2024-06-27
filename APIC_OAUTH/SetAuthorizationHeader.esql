@@ -1,0 +1,12 @@
+
+
+CREATE COMPUTE MODULE SetAuthorizationHeader
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot.HTTPInputHeader.Authorization = InputRoot.JSON.Data.token_type || ' ' || InputRoot.JSON.Data.access_token;
+	END;
+END MODULE;

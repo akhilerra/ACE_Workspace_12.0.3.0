@@ -1,0 +1,29 @@
+PATH CommonEsql;
+
+CREATE COMPUTE MODULE InRouter_Compute
+	DECLARE var BOOLEAN;
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE config CHARACTER 'C:\log4j\Log4jConfigurationFile.xml';
+		CALL initLog4j(config)into var;
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+	
+		DECLARE inmsg CHARACTER CAST(ASBITSTREAM(InputRoot.XMLNSC ENCODING 546 CCSID 1208) AS CHARACTER CCSID 1208);
+
+		If var IS NOT null then
+			CALL writeToLogFile(ApplicationLabel, 'dco_debug', 'DEBUG', inmsg)into var;
+		End IF;
+
+		SET OutputRoot.MQRFH2.usr.replyId = InputLocalEnvironment.Destination.HTTP.RequestIdentifier;
+		SET OutputRoot.XMLNSC.EmpDetails = InputRoot.XMLNSC.EmpDetails;
+		SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueName = 'IN';
+
+		If var IS NOT null then
+			CALL writeToLogFile(ApplicationLabel, 'dco_debug', 'DEBUG', inmsg)into var;
+		End IF;
+
+	END;
+END MODULE;

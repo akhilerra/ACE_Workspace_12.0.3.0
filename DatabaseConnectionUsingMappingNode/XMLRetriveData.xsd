@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="Data">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Name"/>
+        <xsd:element ref="ID"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="ID" type="xsd:string"/>
+  <xsd:element name="Name">
+    <xsd:complexType/>
+  </xsd:element>
+</xsd:schema>
