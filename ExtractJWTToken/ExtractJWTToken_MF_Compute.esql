@@ -12,20 +12,18 @@ CREATE COMPUTE MODULE ExtractJWTToken_MF_Compute
 		SET token = REPLACE(token, SUBSTRING(token from 0 for dot1+1), '');
 
 		DECLARE dot2 INTEGER POSITION('.' IN token);
-		SET token = REPLACE(token, SUBSTRING(token from dot2), '');	
-		DECLARE bol BOOLEAN;
-		DECLARE decodedToken CHARACTER;
---		SET decodedToken = CAST(DecodeBase62Data(token) AS CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
+		SET token = REPLACE(token, SUBSTRING(token from dot2), '');
+
 		CREATE LASTCHILD OF OutputRoot DOMAIN('JSON') PARSE(DecodeBase62Data(token));
 		DELETE FIRSTCHILD OF OutputRoot.JSON.Data;
 		DELETE LASTCHILD OF OutputRoot.JSON.Data;
 		DELETE LASTCHILD OF OutputRoot.JSON.Data;
 		DELETE LASTCHILD OF OutputRoot.JSON.Data;
-		
+
 		DECLARE lenOftoken INTEGER LENGTH(OutputRoot.JSON.Data.sub);
-		
-		DECLARE key CHARACTER SUBSTRING(OutputRoot.JSON.Data.sub FROM 5);
-		SET key = SUBSTRING(key FROM lenOftoken-1);
+
+		DECLARE key CHARACTER SUBSTRING(OutputRoot.JSON.Data.sub FROM 5 FOR lenOftoken-6);
+
 		SET OutputRoot.JSON.Data.EncryptedData = EncryptData('akhil', key);
 
 	END;

@@ -8,7 +8,7 @@ import java.util.Base64;
 
 public class MessageDecrypt {
 
-    // RSA public key in Base64 encoded format
+    //RSA public key in Base64 encoded format
 //    private static final String RSA_PUBLIC_KEY_BASE64 = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArZF+bmLFudosXCarBbJelkdiay8ZBHp5jKilOIk93zwgTz9/TOOX78guncqq6s7CzB5TDX0GJbUe+AnJGcyf0YWAMUUgdsr/nH5TrKZmLOuQVzWhxcxp5YFUg+5FiEY9uHrC3ahH2eLA6q7QDPitlRfu9bsyXtgMo6ISJSWKWXVGAlC7oOGmFnOmfiqtHkiF1gugpxqFWnPs6yRQt0Irbn9zOBtJgx/g6bsL+VGP/y93kbZ8zusW1450DWRJC50LHgL9o7+EWyNFjXUWmZeUTayHJrFD99Mqw+Rhgptbr9DxvBMldRQicHUGXSIu+uqWl4jNleTsbXM2LCCEkhXt5QIDAQAB";
 
     public static void main(String[] args) {
