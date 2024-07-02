@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Broker deployBarfile="AccountDetailsproject.generated.bar" deployTimestamp="2024-07-01 12:59:12">
+  <CompiledApplication>
+    <ConfigurableProperty uri="startMode">
+    </ConfigurableProperty>
+  </CompiledApplication>
+  <CompiledMessageFlow name="AccountDetails_MF" deployBarfile="AccountDetailsproject.generated.bar" deployTimestamp="2024-07-01 12:59:12">
+    <ConfigurableProperty uri="AccountDetails_MF#Compute.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#Compute.dataSource" override="dsn21c">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#Compute.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#HTTP Input.URLSpecifier" override="/ACCDETAILS">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#HTTP Input.decompressInputMessage">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#HTTP Input.faultFormat">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#HTTP Input.securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#HTTP Input.timeoutForClient">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#HTTP Input.useHTTPS">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#HTTP Input.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#HTTP Reply.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#additionalInstances">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#commitCount">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#commitInterval">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#consumerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#consumerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#coordinatedTransaction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#maximumRateMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#monitoringProfile">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#notificationThresholdMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#processingTimeoutAction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#processingTimeoutSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#providerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#providerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#startInstancesWhenFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#startMode">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="AccountDetails_MF#wlmPolicy">
+    </ConfigurableProperty>
+  </CompiledMessageFlow>
+</Broker>

@@ -1,0 +1,36 @@
+
+==============================================
+
+!Mon Jul 01 18:29:11 IST 2024
+
+Processing file AccountDetails\AccountDetails_MF.msgflow.
+Successfully added file AccountDetails\AccountDetails_MF.msgflow to BAR file.
+
+==============================================
+
+!Mon Jul 01 18:29:11 IST 2024
+
+Processing file AccountDetails\AccountDetails_MF_Compute.esql.
+Dependent ESQL file CommonEsql/Log4j.esql is added to the BAR file.
+
+Successfully added file AccountDetails\AccountDetails_MF_Compute.esql to BAR file.
+
+==============================================
+
+!Mon Jul 01 18:29:11 IST 2024
+
+Processing file AccountDetails\application.descriptor.
+Successfully added file AccountDetails\application.descriptor to BAR file.
+Elapsed time: 0 second(s).
+
+Successfully added file AccountDetails\application.descriptor to BAR file.
+
+==============================================
+
+!Mon Jul 01 18:29:11 IST 2024
+
+Processing file AccountDetails\application.descriptor.
+Successfully added file AccountDetails\application.descriptor to BAR file.
+Elapsed time: 0 second(s).
+
+Successfully added file AccountDetails\application.descriptor to BAR file.

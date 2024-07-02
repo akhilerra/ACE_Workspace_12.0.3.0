@@ -23,28 +23,28 @@
         <translation xmi:type="utility:ConstantString" string="HTTP Reply"/>
       </nodes>
       <nodes xmi:type="ComIbmHTTPAsyncRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="456,53" asyncResponseCorrelator="ACCDETAILS" URLSpecifier="http://localhost:7800/ACCDETAILS" AddRequestToGroup="true" GroupRequestFolderName="FOLDER">
-        <translation xmi:type="utility:ConstantString" string="HTTP Async Request"/>
+        <translation xmi:type="utility:ConstantString" string="Account Details"/>
       </nodes>
-      <nodes xmi:type="ComIbmHTTPAsyncResponse.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="233,202" asyncRequestCorrelator="ACCDETAILS" messageDomainProperty="JSON">
-        <translation xmi:type="utility:ConstantString" string="HTTP Async Response"/>
+      <nodes xmi:type="ComIbmHTTPAsyncResponse.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="210,184" asyncRequestCorrelator="ACCDETAILS" messageDomainProperty="JSON">
+        <translation xmi:type="utility:ConstantString" string="ACCDETAILS"/>
       </nodes>
       <nodes xmi:type="ComIbmHTTPAsyncRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_8" location="450,115" asyncResponseCorrelator="CCDETAILS" URLSpecifier="http://localhost:7800/CCDETAILS" AddRequestToGroup="true" GroupRequestFolderName="FOLDER2">
-        <translation xmi:type="utility:ConstantString" string="HTTP Async Request1"/>
+        <translation xmi:type="utility:ConstantString" string="Credit Card Details"/>
       </nodes>
       <nodes xmi:type="ComIbmHTTPAsyncResponse.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="178,309" asyncRequestCorrelator="CCDETAILS" messageDomainProperty="JSON">
-        <translation xmi:type="utility:ConstantString" string="HTTP Async Response1"/>
+        <translation xmi:type="utility:ConstantString" string="CCDETAILS"/>
       </nodes>
-      <nodes xmi:type="ComIbmHTTPAsyncRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_12" location="326,35" asyncResponseCorrelator="JANNESH1" URLSpecifier="http://192.168.3.46:7800/custDetails">
-        <translation xmi:type="utility:ConstantString" string="HTTP Async Request2"/>
+      <nodes xmi:type="ComIbmHTTPAsyncRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_12" location="326,35" asyncResponseCorrelator="custDetails" URLSpecifier="http://192.168.3.46:7800/custDetails">
+        <translation xmi:type="utility:ConstantString" string="custDetails"/>
       </nodes>
-      <nodes xmi:type="ComIbmHTTPAsyncRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_13" location="344,137" asyncResponseCorrelator="JANNESH2" URLSpecifier="http://192.168.3.46:7800/loanDetails">
-        <translation xmi:type="utility:ConstantString" string="HTTP Async Request3"/>
+      <nodes xmi:type="ComIbmHTTPAsyncRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_13" location="344,137" asyncResponseCorrelator="loanDetails" URLSpecifier="http://192.168.3.46:7800/loanDetails">
+        <translation xmi:type="utility:ConstantString" string="loanDetails"/>
       </nodes>
-      <nodes xmi:type="ComIbmHTTPAsyncResponse.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_14" location="29,197" asyncRequestCorrelator="JANNESH1">
-        <translation xmi:type="utility:ConstantString" string="HTTP Async Response2"/>
+      <nodes xmi:type="ComIbmHTTPAsyncResponse.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_14" location="29,197" asyncRequestCorrelator="custDetails">
+        <translation xmi:type="utility:ConstantString" string="custDetailsRES"/>
       </nodes>
-      <nodes xmi:type="ComIbmHTTPAsyncResponse.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_15" location="29,259" asyncRequestCorrelator="JANNESH2">
-        <translation xmi:type="utility:ConstantString" string="HTTP Async Response3"/>
+      <nodes xmi:type="ComIbmHTTPAsyncResponse.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_15" location="29,259" asyncRequestCorrelator="loanDetails">
+        <translation xmi:type="utility:ConstantString" string="loanDetailsRES"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_5" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_1" sourceNode="FCMComposite_1_4" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
@@ -52,10 +52,10 @@
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_11" targetNode="FCMComposite_1_8" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_15" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_7" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_16" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_9" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
-      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_17" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_14" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
-      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_18" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_15" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
-      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_19" targetNode="FCMComposite_1_12" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
-      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_20" targetNode="FCMComposite_1_13" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_3" targetNode="FCMComposite_1_12" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_4" targetNode="FCMComposite_1_13" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_5" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_14" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_6" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_15" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
     </composition>
     <propertyOrganizer/>
     <stickyBoard/>

@@ -1,5 +1,3 @@
-
-
 CREATE COMPUTE MODULE CreditCardDetails_MF_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
@@ -7,9 +5,19 @@ CREATE COMPUTE MODULE CreditCardDetails_MF_Compute
 		RETURN TRUE;
 	END;
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		DECLARE RES ROW;
 		
-		 SET RES = PASSTHRU('SELECT CREDITCARDNUMBER, CREDITLIMIT FROM CUSTOMERDETAILS WHERE CUSTOMERID = ?' TO DataSource.dsn21c VALUES(InputRoot.JSON.Data.Customer.Id));
-		 SET OutputRoot.JSON.Data.CREDITCARDDETAILSRES = RES;
+		DECLARE var BOOLEAN;
+
+		CALL CommonEsql.initLog4j('C:\log4j\Log4jConfigurationFile.xml') into var;
+
+		CALL CommonEsql.writeToLogFile(MessageFlowLabel, 'dco_debug', 'DEBUG','Application Data: InputRequest CreditCardDetails') INTO var;
+
+		DECLARE RES ROW;
+
+		SET RES = PASSTHRU('SELECT CREDITCARDNUMBER, CREDITLIMIT FROM CUSTOMERDETAILS WHERE CUSTOMERID = ?' TO DataSource.dsn21c VALUES(InputRoot.JSON.Data.Customer.Id));
+		SET OutputRoot.JSON.Data.CREDITCARDDETAILSRES = RES;
+
+		CALL CommonEsql.writeToLogFile(MessageFlowLabel, 'dco_debug', 'DEBUG','Application Data: OutputRequest CreditCardDetails') INTO var;
+
 	END;
 END MODULE;

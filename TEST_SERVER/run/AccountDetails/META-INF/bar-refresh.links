@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy:Deploy xmlns:deploy="http://www.ibm.com/xmlns/prod/wmb/deploy/6.0.0" overrideConfigurableProperties="false" includeESQL="false">
+  <deployables>
+    <deployable deployed="true" barResourceTimeStamp="1719565140410" workspaceResource="/AccountDetails/AccountDetails_MF.msgflow">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file AccountDetails\AccountDetails_MF.msgflow.&#xA;Successfully added file AccountDetails\AccountDetails_MF.msgflow to BAR file.&#xA;" severity="0"/>
+      <barEntry name="AccountDetails_MF.msgflow"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1719837371789" workspaceResource="/AccountDetails/AccountDetails_MF_Compute.esql">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file AccountDetails\AccountDetails_MF_Compute.esql.&#xA;Dependent ESQL file CommonEsql/Log4j.esql is added to the BAR file.&#xA;&#xA;Successfully added file AccountDetails\AccountDetails_MF_Compute.esql to BAR file.&#xA;" severity="0"/>
+      <barEntry name="AccountDetails_MF_Compute.esql"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1719826362849" workspaceResource="/AccountDetails/application.descriptor">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file AccountDetails\application.descriptor.&#xA;Successfully added file AccountDetails\application.descriptor to BAR file.&#xA;Elapsed time: 0 second(s).&#xA;&#xA;Successfully added file AccountDetails\application.descriptor to BAR file.&#xA;" severity="0"/>
+      <barEntry name="application.descriptor"/>
+    </deployable>
+  </deployables>
+</deploy:Deploy>

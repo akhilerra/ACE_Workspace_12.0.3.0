@@ -1,7 +1,13 @@
-2024-05-09 11:02:51.968032: BIP1990I: Integration server 'TEST_SERVER' starting initialization; version '12.0.3.0' (64-bit) 
-2024-05-09 11:02:52.006884: BIP9905I: Initializing resource managers. 
+2024-07-01 18:22:23.223786: BIP1990I: Integration server 'TEST_SERVER' starting initialization; version '12.0.3.0' (64-bit) 
+2024-07-01 18:22:23.254294: BIP9905I: Initializing resource managers. 
 Listening for transport dt_socket at address: 9997
-2024-05-09 11:03:00.173702: BIP9906I: Reading deployed resources. 
-2024-05-09 11:03:01.865524: BIP2866I: IBM App Connect Enterprise administration security is inactive. 
-2024-05-09 11:03:01.912849: BIP3132I: The HTTP Listener has started listening on port '7600' for 'RestAdmin http' connections. 
-2024-05-09 11:03:01.920328: BIP1991I: Integration server has finished initialization. 
+2024-07-01 18:22:49.481704: BIP9906I: Reading deployed resources. 
+2024-07-01 18:23:02.011781: BIP2866I: IBM App Connect Enterprise administration security is inactive. 
+2024-07-01 18:23:02.068013: BIP3132I: The HTTP Listener has started listening on port '7600' for 'RestAdmin http' connections. 
+2024-07-01 18:23:02.103476: BIP1991I: Integration server has finished initialization. 
+2024-07-01 18:29:12.108328: BIP2152I: Configuration message received. 
+2024-07-01 18:29:12.244994: BIP1239E: Application 'AccountDetails' references shared library 'CommonEsql', which is not deployed to the integration server. 
+2024-07-01 18:29:12.248495: BIP2155I: About to 'Initialize' the deployed resource 'AccountDetails' of type 'Application'. 
+2024-07-01 18:29:12.248674: BIP9324W: The request to 'Initialize' the deployed resource 'AccountDetails' of type 'Application' has failed. 
+2024-07-01 18:29:12.248760: BIP1096E: The source 'AccountDetailsproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. 
+2024-07-01 18:29:12.249327: BIP2154I: Integration server finished with Configuration message. 

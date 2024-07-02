@@ -1,6 +1,12 @@
-2024-05-09 05:32:51.968032Z: [Thread 3220] (Msg 1/1) BIP1990I: Integration server 'TEST_SERVER' starting initialization; version '12.0.3.0' (64-bit) 
-2024-05-09 05:32:52.006884Z: [Thread 3220] (Msg 1/1) BIP9905I: Initializing resource managers. 
-2024-05-09 05:33:00.173702Z: [Thread 3220] (Msg 1/1) BIP9906I: Reading deployed resources. 
-2024-05-09 05:33:01.865524Z: [Thread 9904] (Msg 1/1) BIP2866I: IBM App Connect Enterprise administration security is inactive. 
-2024-05-09 05:33:01.912849Z: [Thread 9904] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7600' for 'RestAdmin http' connections. 
-2024-05-09 05:33:01.920328Z: [Thread 3220] (Msg 1/1) BIP1991I: Integration server has finished initialization. 
+2024-07-01 12:52:23.223786Z: [Thread 5520] (Msg 1/1) BIP1990I: Integration server 'TEST_SERVER' starting initialization; version '12.0.3.0' (64-bit) 
+2024-07-01 12:52:23.254294Z: [Thread 5520] (Msg 1/1) BIP9905I: Initializing resource managers. 
+2024-07-01 12:52:49.481704Z: [Thread 5520] (Msg 1/1) BIP9906I: Reading deployed resources. 
+2024-07-01 12:53:02.011781Z: [Thread 9488] (Msg 1/1) BIP2866I: IBM App Connect Enterprise administration security is inactive. 
+2024-07-01 12:53:02.068013Z: [Thread 9488] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7600' for 'RestAdmin http' connections. 
+2024-07-01 12:53:02.103476Z: [Thread 5520] (Msg 1/1) BIP1991I: Integration server has finished initialization. 
+2024-07-01 12:59:12.108328Z: [Thread 4156] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-07-01 12:59:12.244994Z: [Thread 4156] (Msg 1/1) BIP1239E: Application 'AccountDetails' references shared library 'CommonEsql', which is not deployed to the integration server. 
+2024-07-01 12:59:12.248495Z: [Thread 4156] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'AccountDetails' of type 'Application'. 
+2024-07-01 12:59:12.248674Z: [Thread 4156] (Msg 1/1) BIP9324W: The request to 'Initialize' the deployed resource 'AccountDetails' of type 'Application' has failed. 
+2024-07-01 12:59:12.248760Z: [Thread 4156] (Msg 1/1) BIP1096E: The source 'AccountDetailsproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. 
+2024-07-01 12:59:12.249327Z: [Thread 4156] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 

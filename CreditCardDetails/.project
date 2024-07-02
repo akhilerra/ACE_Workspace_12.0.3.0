@@ -3,6 +3,7 @@
 	<name>CreditCardDetails</name>
 	<comment></comment>
 	<projects>
+		<project>CommonEsql</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
